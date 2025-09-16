@@ -62,6 +62,13 @@ hfcl,ion4xi_w)
 	ucidef_set_led_wlan "wlan5g" "WLAN5G" "blue:wifi5" "phy0tpt"
 	ucidef_set_led_wlan "wlan2g" "WLAN2G" "blue:wifi2" "phy1tpt"
 	;;
+zyxel,scr50axe)
+	ucidef_set_led_wlan "wlan2g" "WLAN2G" "green:wifi2" "phy0tpt"
+	ucidef_set_led_wlan "wlan5g" "WLAN5G" "green:wifi5" "phy1tpt"
+	ucidef_set_led_wlan "wlan6g" "WLAN6G" "green:wifi6" "phy2tpt"
+	ucidef_set_led_default "power" "POWER" "green:power" "on"
+	ucidef_set_led_netdev "wan" "wan" "green:wan" "eth0"
+	;;
 yuncore,fap650|\
 yuncore,fap655)
 	ucidef_set_led_wlan "wlan2g" "WLAN2G" "green:wifi2" "phy0tpt"

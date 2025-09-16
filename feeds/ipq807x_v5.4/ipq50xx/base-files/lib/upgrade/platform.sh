@@ -87,6 +87,7 @@ platform_check_image() {
 	optimcloud,d60-5g|\
 	optimcloud,d50|\
 	optimcloud,d50-5g|\
+	zyxel,scr50axe|\
 	yuncore,fap655|\
 	glinet,b3000|\
 	udaya,a6-id2|\
@@ -132,6 +133,10 @@ platform_do_upgrade() {
 	glinet,b3000)
 		CI_UBIPART="rootfs1"
 		[ "$(find_mtd_chardev rootfs)" ] && CI_UBIPART="rootfs"
+		nand_upgrade_tar "$1"
+		;;
+	zyxel,scr50axe)
+		CI_UBIPART="rootfs"
 		nand_upgrade_tar "$1"
 		;;
 	hfcl,ion4x_w|\

@@ -138,6 +138,17 @@ define Device/wallys_dr5018
 endef
 TARGET_DEVICES += wallys_dr5018
 
+define Device/zyxel_scr50axe
+  DEVICE_TITLE := Zyxel SCR50AXE
+  DEVICE_DTS := qcom-ipq5018-zyxel-scr50axe
+  SUPPORTED_DEVICES := zyxel,scr50axe
+  DEVICE_PACKAGES := ath11k-wifi-zyxel-scr50axe ath11k-firmware-ipq50xx-spruce ath11k-firmware-qcn6122
+  DEVICE_DTS_CONFIG := config@mp03.5-c1
+  IMAGES := sysupgrade.tar nand-factory.ubi
+  IMAGE/nand-factory.ubi := append-ubi
+endef
+TARGET_DEVICES += zyxel_scr50axe
+
 define Device/yuncore_fap655
   DEVICE_TITLE := Yuncore FAP650
   DEVICE_DTS := qcom-ipq5018-yuncore-fap655

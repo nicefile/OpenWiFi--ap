@@ -61,6 +61,7 @@ ALLWIFIBOARDS:= \
 	sonicfi-rap630e \
 	tplink-ex227 \
 	tplink-ex447 \
+	zyxel-scr50axe \
 	yuncore-ax840 \
 	yuncore-fap650 \
 	yuncore-fap655 \
@@ -460,6 +461,7 @@ $(eval $(call generate-ath11k-wifi-package,yuncore-fap655,YunCore FAP655))
 $(eval $(call generate-ath11k-wifi-package,udaya-a6-id2,Udaya A6-ID2))
 $(eval $(call generate-ath11k-wifi-package,udaya-a6-od2,Udaya A6-OD2))
 $(eval $(call generate-ath11k-wifi-package,wallys-dr5018,Wallys DR5018))
+$(eval $(call generate-ath11k-wifi-package,zyxel-scr50axe,Zyxel SCR50AXE))
 
 $(foreach PACKAGE,$(ALLWIFIPACKAGES),$(eval $(call BuildPackage,$(PACKAGE))))
 $(eval $(call BuildPackage,ath11k-wifi-qcom-ipq5018))
