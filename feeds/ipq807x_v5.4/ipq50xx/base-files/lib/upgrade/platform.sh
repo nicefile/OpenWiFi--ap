@@ -96,6 +96,7 @@ platform_check_image() {
 	edgecore,oap101|\
 	edgecore,oap101-6e|\
 	edgecore,oap101e|\
+	zyxel,scr50axe|\
 	emplus,wap581|\
 	edgecore,oap101e-6e)
 		[ "$magic_long" = "73797375" ] && return 0
@@ -119,7 +120,8 @@ platform_do_upgrade() {
 	edgecore,oap101-6e|\
 	edgecore,oap101e|\
 	edgecore,oap101e-6e|\
-	edgecore,eap104)
+	edgecore,eap104|\
+	zyxel,scr50axe)
 		if [ "$(find_mtd_chardev rootfs)" ]; then
 			CI_UBIPART="rootfs"
 		else

@@ -288,3 +288,15 @@ define Device/emplus_wap581
 endef
 TARGET_DEVICES += emplus_wap581
 
+define Device/zyxel_scr50axe
+  DEVICE_TITLE := Zyxel SCR50AXE
+  DEVICE_DTS := qcom-ipq5018-scr50axe
+  SUPPORTED_DEVICES := zyxel,scr50axe
+  DEVICE_PACKAGES := ath11k-wifi-zyxel-scr50axe ath11k-firmware-ipq50xx-spruce ath11k-firmware-qcn6122
+  DEVICE_DTS_CONFIG := config@mp03.5-c1
+  IMAGES := sysupgrade.tar nand-factory.bin
+  IMAGE/sysupgrade.tar := sysupgrade-tar | append-metadata
+  IMAGE/nand-factory.bin := append-ubi | qsdk-ipq-factory-nand
+endef
+TARGET_DEVICES += zyxel_scr50axe
+
